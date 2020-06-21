@@ -18,10 +18,17 @@
 	<script type="text/javascript">
 		// 声明两个全局组件Parent  Child
 		Vue.component('Child', {
+			data(){
+				
+				return {
+					ChildDataTemp:''
+					
+				}
+			},
 			template: `
 				<div>
-					我是一个子组件
-					<input type='text' v-model='ChildData' v-on:input='changeValue(ChildData)'/>
+					我是一个子组件  {{ChildData}}
+					<input type='text' v-model='ChildDataTemp' v-on:input='changeValue(ChildDataTemp)'/>
 				</div>
 			`,
 			methods: {
